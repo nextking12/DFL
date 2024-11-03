@@ -23,10 +23,14 @@ public class HomeController {
     @PostMapping("/add")
     public ResponseEntity<?> add(@RequestBody HomeDTO homeDTO) {
 
-        HomeEntity newCustomer = new HomeEntity(homeDTO.getFirstName(), homeDTO.getLastName(), homeDTO.getEmailAddress(), homeDTO.getPhoneNumber())ew
+        HomeEntity newCustomer = new HomeEntity(homeDTO.getFirstName(),
+                homeDTO.getLastName(),
+                homeDTO.getEmailAddress(),
+                homeDTO.getPhoneNumber());
 
     homeRepository.save(newCustomer);
 
     return new ResponseEntity<>(homeRepository.findAll(), HttpStatus.OK);
+
     }
 }

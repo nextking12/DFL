@@ -5,9 +5,9 @@ public class HomeDTO {
     private String firstName;
     private String lastName;
     private String emailAddress;
-    private Number phoneNumber;
+    private String phoneNumber;
 
-    public HomeDTO(String firstName, String lastName, String emailAddress, Number phoneNumber) {
+    public HomeDTO(String firstName, String lastName, String emailAddress, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
@@ -26,7 +26,7 @@ public class HomeDTO {
         return emailAddress;
     }
 
-    public Number getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 }

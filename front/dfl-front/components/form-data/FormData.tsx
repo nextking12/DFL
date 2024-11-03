@@ -11,7 +11,7 @@ export default function FormData() {
             firstName: String(event.target.firstName.value),
             lastName: String(event.target.lastName.value),
             emailAddress: String(event.target.emailAddress.value),
-            phoneNumber: Number(event.target.phoneNumber.value),
+            phoneNumber: String(event.target.phoneNumber.value),
         }
 
         await fetch(webUrl + "/home/add", {
@@ -47,7 +47,7 @@ export default function FormData() {
 
         <div>
             <h1>Phone Number:</h1>
-            <input type="text" autoComplete="off" id="phoneNumber" required minLength={3} maxLength={40} />
+            <input type="text" autoComplete="off" id="phoneNumber" required minLength={10} maxLength={11} />
         </div>
 
         <button className="bg-green-500/80 p-2 rounded-md" type ="submit">Submit</button>
