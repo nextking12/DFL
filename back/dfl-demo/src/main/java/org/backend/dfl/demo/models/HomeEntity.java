@@ -16,11 +16,11 @@ public class HomeEntity {
     private String firstName;
     private String lastName;
     private String emailAddress;
-    private Number phoneNumber;
+    private String phoneNumber;
 
 
 
-    public HomeEntity(String firstName, String lastName, String emailAddress, Number phoneNumber) {
+    public HomeEntity(String firstName, String lastName, String emailAddress, String phoneNumber) {
         
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,11 +32,11 @@ public class HomeEntity {
     public HomeEntity() {
     }
 
-    public Number getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Number phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
